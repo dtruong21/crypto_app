@@ -1,4 +1,4 @@
-package app.eleven.cryptonow.ui.theme
+package app.eleven.cryptonow.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

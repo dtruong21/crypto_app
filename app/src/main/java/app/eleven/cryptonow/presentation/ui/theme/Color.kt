@@ -1,4 +1,4 @@
-package app.eleven.cryptonow.ui.theme
+package app.eleven.cryptonow.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

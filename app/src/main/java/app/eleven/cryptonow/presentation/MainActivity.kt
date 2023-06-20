@@ -1,4 +1,4 @@
-package app.eleven.cryptonow
+package app.eleven.cryptonow.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import app.eleven.cryptonow.ui.theme.CryptoNowTheme
+import app.eleven.cryptonow.presentation.ui.theme.CryptoNowTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Crypto Now</string>
+    <string name="load_crypto">Load Crypto</string>
 </resources>

@@ -7,10 +7,10 @@ import retrofit2.http.Path
 
 interface CryptoApi {
 
-	@GET("/assets")
+	@GET("assets")
 	suspend fun getCryptos(): CryptoResponse
 
-	@GET("/assets/{id}/markets")
+	@GET("assets/{id}/markets")
 	suspend fun getCryptoMarkets(@Path("id") id: String): CryptoMarketResponse
 
 }

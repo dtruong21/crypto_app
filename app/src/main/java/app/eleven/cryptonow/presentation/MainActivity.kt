@@ -37,7 +37,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainScreen() {
 	val navController = rememberNavController()
-
 	NavHost(navController = navController, startDestination = Screen.MainScreen.route) {
 		composable(Screen.MainScreen.route) {
 			CryptoScreen{

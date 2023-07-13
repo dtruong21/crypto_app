@@ -4,6 +4,7 @@ import app.eleven.cryptonow.common.BASE_URL
 import app.eleven.cryptonow.data.remote.api.CryptoApi
 import app.eleven.cryptonow.data.repository.CryptoDatasource
 import app.eleven.cryptonow.domain.repository.CryptoRepository
+import app.eleven.cryptonow.framework.AppDatabase
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -34,7 +35,12 @@ object AppModule {
 
 	@Provides
 	@Singleton
-	fun provideCryptoRepository(cryptoApi: CryptoApi): CryptoRepository =
-		CryptoDatasource(cryptoApi)
+	fun provideCryptoRepository(cryptoApi: CryptoApi, database: AppDatabase): CryptoRepository =
+		CryptoDatasource(cryptoApi, database)
 
+
+	@Provides
+	@Singleton
+	fun provideLocalDatabase(): AppDatabase =
+		AppDatabase.getInstance()
 }

@@ -1,6 +1,7 @@
 package app.eleven.cryptonow.data.remote.dto.asset
 
 
+import app.eleven.cryptonow.data.local.entities.CryptoEntity
 import app.eleven.cryptonow.domain.model.Crypto
 import com.squareup.moshi.Json
 
@@ -35,4 +36,10 @@ fun CryptoDto.toCrypto(): Crypto = Crypto(
 	id = id ?: "",
 	symbol = symbol ?: "",
 	price = priceUsd ?: ""
+)
+
+fun CryptoDto.toCryptoEntity(): CryptoEntity = CryptoEntity(
+	id = id ?: "",
+	name = symbol ?: "",
+	value = priceUsd ?: ""
 )

@@ -20,7 +20,7 @@ class CryptoViewModel @Inject constructor(private val interactor: CryptoInteract
 	private val _uiState = MutableStateFlow(UiState())
 	val uiState = _uiState.asStateFlow()
 
-	private fun getCryptos() {
+	internal fun getCryptos() {
 		interactor.getCryptosUC().onEach { resource ->
 			when (resource) {
 				is Resource.Error -> _uiState.update {

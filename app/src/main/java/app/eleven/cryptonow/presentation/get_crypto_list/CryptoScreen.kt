@@ -67,6 +67,7 @@ fun CryptoScreenContent(
 
 			uiState.cryptos.isNotEmpty() -> {
 				LazyColumn {
+
 					items(uiState.cryptos) {
 						CryptoItemList(crypto = it) { id ->
 							onItemClick(id)

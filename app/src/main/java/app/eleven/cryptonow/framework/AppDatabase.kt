@@ -8,7 +8,7 @@ import app.eleven.cryptonow.data.local.dao.CryptoDao
 import app.eleven.cryptonow.data.local.entities.CryptoEntity
 
 @Database(
-	version = 1,
+	version = 2,
 	exportSchema = false,
 	entities = [
 		CryptoEntity::class
